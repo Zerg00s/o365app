@@ -24,27 +24,30 @@
     "test": "jest"
   },
   "jest": {
-  "preset": "react-native",
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js"
-  ],
-  "transform": {
-    "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
-    "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
   },
-  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-  "testPathIgnorePatterns": [
-    "\\.snap$",
-    "<rootDir>/node_modules/"
-  ],
-  "cacheDirectory": ".jest/cache"
-},
   "dependencies": {
+    "@types/react-navigation": "^2.0.8",
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-native-action-button": "^2.8.4",
+    "react-navigation": "^2.5.5",
     "tslint": "^5.10.0"
   }
 }
